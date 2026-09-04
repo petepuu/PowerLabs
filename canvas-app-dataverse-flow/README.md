@@ -50,21 +50,21 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P1-table-columns.png` | Part 1 – Table columns |
 | `P1-new-column.png` | Part 1 – Opening the New column panel |
 | `sync-global-choice.png` | Part 1 – Choice: Sync with global choice = No |
-| `03-new-instant-flow.png` | Part 2 – Create instant cloud flow |
-| `03-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
-| `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
-| `03-new-action.png` | Part 2 – Add a new action |
-| `03-send-an-email-action.png` | Part 2 – Search Send an email action |
-| `03-outlook-connection.png` | Part 2 – Sign in to create the connection |
-| `03-sendanemail-rename.png` | Part 2 – Rename action to SendEmail |
-| `03-sendanemail-dynamic-content.png` | Part 2 – Enable Dynamic content for To |
-| `03-sendanemail-to.png` | Part 2 – Select RequestorEmail for To |
-| `03-sendanemail-subject.png` | Part 2 – Subject with dynamic content |
-| `03-sendanemail-priority.png` | Part 2 – Priority dynamic content in Body |
-| `03-respond-to-app.png` | Part 2 – Respond to a PowerApp or flow |
-| `03-respond-to-app-2.png` | Part 2 – Return Result output |
-| `03-respond-to-app-3.png` | Part 2 – Add SendEmail status expression |
-| `03-save-flow.png` | Part 2 – Save the flow |
+| `P2-new-instant-flow.png` | Part 2 – Create instant cloud flow |
+| `P2-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
+| `P2-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
+| `P2-new-action.png` | Part 2 – Add a new action |
+| `P2-send-an-email-action.png` | Part 2 – Search Send an email action |
+| `P2-outlook-connection.png` | Part 2 – Sign in to create the connection |
+| `P2-sendanemail-rename.png` | Part 2 – Rename action to SendEmail |
+| `P2-sendanemail-dynamic-content.png` | Part 2 – Enable Dynamic content for To |
+| `P2-sendanemail-to.png` | Part 2 – Select RequestorEmail for To |
+| `P2-sendanemail-subject.png` | Part 2 – Subject with dynamic content |
+| `P2-sendanemail-priority.png` | Part 2 – Priority dynamic content in Body |
+| `P2-respond-to-app.png` | Part 2 – Respond to a PowerApp or flow |
+| `P2-respond-to-app-2.png` | Part 2 – Return Result output |
+| `P2-respond-to-app-3.png` | Part 2 – Add SendEmail status expression |
+| `P2-save-flow.png` | Part 2 – Save the flow |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
@@ -129,46 +129,46 @@ You'll build the flow first so the app can call it.
 1. Go to **https://make.powerautomate.com** (same environment).
 2. Select **Create** → **Instant cloud flow**.
 
-   ![Creating a new instant cloud flow](images/03-new-instant-flow.png)
+   ![Creating a new instant cloud flow](images/P2-new-instant-flow.png)
 
 3. Name it `Notify Maintenance Request`, choose **When Power Apps calls a flow
    (V2)** and then click **Create**.
 
-   ![Naming the flow and choosing the PowerApps V2 trigger](images/03-new-instant-flow-2.png)
+   ![Naming the flow and choosing the PowerApps V2 trigger](images/P2-new-instant-flow-2.png)
 
 4. On the **PowerApps (V2)** trigger, select **+ Add an input**:
    - Add a **Text** input named `RequestTitle`.
    - Add a **Text** input named `RequestorEmail`.
    - Add a **Text** input named `Priority`.
 
-   ![PowerApps V2 trigger with three text inputs](images/03-flow-trigger-inputs.png)
+   ![PowerApps V2 trigger with three text inputs](images/P2-flow-trigger-inputs.png)
 
 5. Select **+ New action**.
 
-   ![Adding a new action to the flow](images/03-new-action.png)
+   ![Adding a new action to the flow](images/P2-new-action.png)
 
 6. Search for send an email and select **Office 365 Outlook** > **Send an email
    (V2)** action.
 
-   ![Searching for the Send an email action](images/03-send-an-email-action.png)
+   ![Searching for the Send an email action](images/P2-send-an-email-action.png)
 
 7. Select **Sign in** to create the connection.
 
-   ![Signing in to create the Office 365 Outlook connection](images/03-outlook-connection.png)
+   ![Signing in to create the Office 365 Outlook connection](images/P2-outlook-connection.png)
 
 8. Configure **Send an email (V2)** action like below:
    - Rename the action as `SendEmail`.
 
-     ![Renaming the action to SendEmail](images/03-sendanemail-rename.png)
+     ![Renaming the action to SendEmail](images/P2-sendanemail-rename.png)
    - Enable Dynamic content for the **To** field.
 
-     ![Enabling Dynamic content for the To field](images/03-sendanemail-dynamic-content.png)
+     ![Enabling Dynamic content for the To field](images/P2-sendanemail-dynamic-content.png)
    - **To:** click lightning icon and select `RequestorEmail`.
 
-     ![Selecting RequestorEmail for the To field](images/03-sendanemail-to.png)
+     ![Selecting RequestorEmail for the To field](images/P2-sendanemail-to.png)
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
 
-     ![Setting the Subject with dynamic content](images/03-sendanemail-subject.png)
+     ![Setting the Subject with dynamic content](images/P2-sendanemail-subject.png)
    - **Body:**
      ```
      Your maintenance request "@{triggerBody()['text']}" was logged.
@@ -178,24 +178,24 @@ You'll build the flow first so the app can call it.
      (Use the **Dynamic content** picker to insert `RequestTitle` and `Priority`
      instead of typing the tokens.)
 
-     ![Inserting Priority dynamic content in the Body](images/03-sendanemail-priority.png)
+     ![Inserting Priority dynamic content in the Body](images/P2-sendanemail-priority.png)
 9. Add **+ New step** → **Respond to a PowerApp or flow**.
 
-   ![Respond to a PowerApp or flow action](images/03-respond-to-app.png)
+   ![Respond to a PowerApp or flow action](images/P2-respond-to-app.png)
 10. Add output (Text) with name `Result`, then click the value field and select
     expression.
 
-    ![Returning the Result output from the flow](images/03-respond-to-app-2.png)
+    ![Returning the Result output from the flow](images/P2-respond-to-app-2.png)
 11. Type or copy-paste this expression to the field and click **Add**:
 
     ```
     actions('SendEmail').status
     ```
 
-    ![Adding the SendEmail status expression](images/03-respond-to-app-3.png)
+    ![Adding the SendEmail status expression](images/P2-respond-to-app-3.png)
 12. **Save** the flow.
 
-   ![Saving the flow](images/03-save-flow.png)
+   ![Saving the flow](images/P2-save-flow.png)
 
 ✅ **Checkpoint:** A flow named `Notify Maintenance Request` accepts 3 inputs and
 sends an email.
