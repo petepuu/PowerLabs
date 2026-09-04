@@ -51,6 +51,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `new-column.png` | Part 1 – Opening the New column panel |
 | `sync-global-choice.png` | Part 1 – Choice: Sync with global choice = No |
 | `03-new-instant-flow.png` | Part 2 – Create instant cloud flow |
+| `03-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
@@ -119,9 +120,12 @@ You'll build the flow first so the app can call it.
 
    ![Creating a new instant cloud flow](images/03-new-instant-flow.png)
 
-3. Name it `Notify Maintenance Request`.
-4. Choose the trigger **When Power Apps calls a flow (V2)** → **Create**.
-5. On the **PowerApps (V2)** trigger, select **+ Add an input**:
+3. Name it `Notify Maintenance Request`, choose **When Power Apps calls a flow
+   (V2)** and then click **Create**.
+
+   ![Naming the flow and choosing the PowerApps V2 trigger](images/03-new-instant-flow-2.png)
+
+4. On the **PowerApps (V2)** trigger, select **+ Add an input**:
    - Add a **Text** input named `RequestTitle`.
    - Add a **Text** input named `RequestorEmail`.
    - Add a **Text** input named `Priority`.
