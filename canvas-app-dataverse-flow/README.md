@@ -55,6 +55,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `03-new-action.png` | Part 2 – Add a new action |
 | `03-send-an-email-action.png` | Part 2 – Search Send an email action |
+| `03-outlook-connection.png` | Part 2 – Sign in to create the connection |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
@@ -143,7 +144,11 @@ You'll build the flow first so the app can call it.
 
    ![Searching for the Send an email action](images/03-send-an-email-action.png)
 
-7. Configure **Send an email (V2)** action like below:
+7. Select **Sign in** to create the connection.
+
+   ![Signing in to create the Office 365 Outlook connection](images/03-outlook-connection.png)
+
+8. Configure **Send an email (V2)** action like below:
    - **To:** click the field → **Dynamic content** → `RequestorEmail`.
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
    - **Body:**
