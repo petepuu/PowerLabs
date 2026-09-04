@@ -143,8 +143,7 @@ You'll build the flow first so the app can call it.
 
    ![Searching for the Send an email action](images/03-send-an-email-action.png)
 
-7. Select **Send an email (V2)** (or use **Send me an email notification** if you
-   prefer no connector setup) and configure it:
+7. Configure **Send an email (V2)** action like below:
    - **To:** click the field → **Dynamic content** → `RequestorEmail`.
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
    - **Body:**
