@@ -56,6 +56,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-new-action.png` | Part 2 – Add a new action |
 | `03-send-an-email-action.png` | Part 2 – Search Send an email action |
 | `03-outlook-connection.png` | Part 2 – Sign in to create the connection |
+| `03-sendanemail-rename.png` | Part 2 – Rename action to SendEmail |
 | `03-sendanemail-dynamic-content.png` | Part 2 – Enable Dynamic content for To |
 | `03-sendanemail-to.png` | Part 2 – Select RequestorEmail for To |
 | `03-sendanemail-subject.png` | Part 2 – Subject with dynamic content |
@@ -155,6 +156,9 @@ You'll build the flow first so the app can call it.
    ![Signing in to create the Office 365 Outlook connection](images/03-outlook-connection.png)
 
 8. Configure **Send an email (V2)** action like below:
+   - Rename the action as `SendEmail`.
+
+     ![Renaming the action to SendEmail](images/03-sendanemail-rename.png)
    - Enable Dynamic content for the **To** field.
 
      ![Enabling Dynamic content for the To field](images/03-sendanemail-dynamic-content.png)
