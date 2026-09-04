@@ -1,6 +1,6 @@
 # Lab: Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
 
-**Duration:** ~30 minutes
+**Duration:** ~40 minutes
 **Level:** Beginner
 **Product area:** Microsoft Power Platform (Power Apps, Dataverse, Power Automate)
 
@@ -13,6 +13,8 @@ maintenance requests. In this lab you will:
 2. Build a **Canvas Power App** to add and view requests.
 3. Create a **Power Automate cloud flow** and call it from the app to send a
    confirmation notification.
+4. Add an **approval** so a manager approves each request and the record's
+   **Status** updates automatically based on the decision.
 
 ## Prerequisites
 
@@ -20,7 +22,9 @@ maintenance requests. In this lab you will:
   (a Developer environment works — https://make.powerapps.com).
 - A license or trial that includes Power Apps and Power Automate.
 - A modern browser (Edge/Chrome).
-- ~30 minutes.
+- ~40 minutes.
+- For Part 5 (approvals), the **Approvals** connector (included with most
+  Microsoft 365 plans).
 
 > Tip: If you don't have an environment, sign up for the free
 > **Power Apps Developer Plan** at https://powerapps.microsoft.com/developerplan/.
@@ -53,6 +57,8 @@ labeled with the part and step it belongs to. To use your own captures:
 | `08-add-flow-to-app.png` | Part 4 – Add flow to app |
 | `09-button-onselect.png` | Part 4 – Button OnSelect (Power Fx) |
 | `10-test-email.png` | Test – Confirmation email + run history |
+| `11-approval-action.png` | Part 5 – Start and wait for an approval |
+| `12-approval-condition.png` | Part 5 – Condition on Outcome + update Status |
 
 ---
 
@@ -242,6 +248,57 @@ flow, which sends the confirmation email.
 
 ---
 
+## Part 5 — Add an approval (~10 min)
+
+Now extend the flow so a manager approves each request, and the Dataverse
+**Status** updates automatically based on the decision.
+
+1. Open the flow **`Notify Maintenance Request`** in
+   **https://make.powerautomate.com** → **Edit**.
+2. After the trigger (and before or after the email step), select **+ New step**
+   → search **Approvals** → choose **Start and wait for an approval**.
+   - **Approval type:** `Approve/Reject – First to respond`.
+   - **Title:** `Maintenance request: ` + dynamic content `RequestTitle`.
+   - **Assigned to:** your own email (so you can approve it in this lab) — in
+     real life this would be the facilities manager.
+   - **Details:** add `Priority: ` + dynamic content `Priority`.
+
+   ![Start and wait for an approval action](images/11-approval-action.png)
+   *The Approvals "Start and wait for an approval" action.*
+
+3. Add **+ New step** → **Condition**. Set it to:
+   `Outcome` (dynamic content from the approval) **is equal to** `Approve`.
+4. Configure the two branches:
+   - **If yes** → **Add an action** → **Microsoft Dataverse → Update a row**.
+     - **Table name:** `Maintenance Requests`.
+     - **Row ID:** dynamic content for the created row's ID. *(If your flow only
+       had the PowerApps trigger, first add a Dataverse **Add a row** step at the
+       top that creates the record and returns its ID — see the note below.)*
+     - **Status:** `In Progress`.
+   - **If no** → **Update a row** the same way, but set **Status** to a rejected
+     value (reuse `New`, or add a `Rejected` choice to the table).
+
+   ![Condition on approval Outcome updating Status](images/12-approval-condition.png)
+   *Branching on the approval Outcome to update the row Status.*
+
+5. *(Optional)* In each branch add a **Send an email (V2)** action to tell the
+   requestor the outcome.
+6. **Save** the flow and **Test** → **Manually**, or trigger it from the app.
+
+> **Note — where the row comes from:** In Parts 3–4 the **app** creates the
+> Dataverse row (via `SubmitForm`) and then calls the flow. For the flow to
+> update *that* row, pass the new record's ID from the app into the flow:
+> add a **Text** input `RecordID` to the trigger, then in the button call use
+> `NotifyMaintenanceRequest.Run(Form1.LastSubmit.Title, ..., Form1.LastSubmit.'Maintenance Request')`
+> to pass `Form1.LastSubmit.<primary-id>`. Alternatively, let the **flow** create
+> the row with a **Dataverse → Add a row** step and use its returned **Row ID**
+> in the Update actions.
+
+✅ **Checkpoint:** The request now routes through an approval, and the row's
+**Status** becomes `In Progress` when approved.
+
+---
+
 ## Test end-to-end
 
 1. In Preview, fill the form: Title = `Broken AC`, Location = `Bldg 3 / Rm 210`,
@@ -251,6 +308,10 @@ flow, which sends the confirmation email.
 4. Check your inbox for the `Request received: Broken AC` email.
 5. In Power Automate → **My flows** → `Notify Maintenance Request` →
    **Run history** to confirm a successful run.
+6. **Approve the request:** open the approval from the email, the **Approvals**
+   app in Teams, or **Power Automate → Approvals → Received**, and select
+   **Approve**. Confirm the record's **Status** changed to `In Progress` in the
+   app gallery (or in the table's data view).
 
 ![Confirmation email and successful flow run history](images/10-test-email.png)
 *The confirmation email plus a successful run in the flow's run history.*
@@ -270,6 +331,12 @@ flow, which sends the confirmation email.
   e.g., `Form1.Updates.'Requestor Email'`.
 - **Permission errors:** Confirm you're in the correct environment and have
   maker/creator rights.
+- **Approval never arrives:** Check the flow **Run history** at the *Start and
+  wait for an approval* step; ensure **Assigned to** is a valid user; look in the
+  **Approvals** app in Teams and in email (including Junk).
+- **Status doesn't update after approval:** Verify the **Update a row** action
+  has the correct **Row ID** (the created record's primary ID) and that the
+  **Status** choice value matches a real option on the table.
 
 ---
 
@@ -280,6 +347,8 @@ flow, which sends the confirmation email.
   that reads (gallery) and writes (edit form) Dataverse data.
 - Authoring an **instant Power Automate cloud flow** with PowerApps (V2) inputs.
 - **Calling the flow from Power Fx** using `<FlowName>.Run(...)` and passing form values.
+- Adding an **approval** with *Start and wait for an approval*, branching on the
+  **Outcome**, and updating a Dataverse row's **Status** automatically.
 
 ## Stretch goals (optional)
 
