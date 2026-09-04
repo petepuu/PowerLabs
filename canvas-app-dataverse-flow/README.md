@@ -93,9 +93,10 @@ labeled with the part and step it belongs to. To use your own captures:
    | `Status`      | Choice               | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text (Email format) | Who logged it                       |
 
-   > **Note (Choice columns):** For `Priority` and `Status`, when the **New
-   > column** panel asks **Sync with global choice?**, set it to **No** so you
-   > create a local choice with your own options for this table.
+   > [!CAUTION]
+   > **Choice columns:** For `Priority` and `Status`, when the **New column**
+   > panel asks **Sync with global choice?**, set it to **No** so you create a
+   > local choice with your own options for this table.
 
    ![Sync with global choice set to No](images/sync-global-choice.png)
 
