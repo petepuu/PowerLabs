@@ -99,8 +99,8 @@ labeled with the part and step it belongs to. To use your own captures:
 
    ![Sync with global choice set to No](images/sync-global-choice.png)
 
-7. **Save** the table. Leave the designer open (optional: add 1–2 sample rows
-   via **Edit** → **+ New row**).
+7. Your table should now look like this. *(Optional)* Add a couple of sample rows
+   via **Edit** → **+ New row**.
 
    ![Maintenance Request table with custom columns](images/02-table-columns.png)
 
