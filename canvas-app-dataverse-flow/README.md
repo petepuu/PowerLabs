@@ -53,6 +53,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-new-instant-flow.png` | Part 2 – Create instant cloud flow |
 | `03-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
+| `03-new-action.png` | Part 2 – Add a new action |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
@@ -132,9 +133,12 @@ You'll build the flow first so the app can call it.
 
    ![PowerApps V2 trigger with three text inputs](images/03-flow-trigger-inputs.png)
 
-6. Select **+ New step** → search **Office 365 Outlook** → action
-   **Send an email (V2)** (or use **Send me an email notification** if you
-   prefer no connector setup).
+5. Select **+ New action**.
+
+   ![Adding a new action to the flow](images/03-new-action.png)
+
+6. Search **Office 365 Outlook** → action **Send an email (V2)** (or use **Send
+   me an email notification** if you prefer no connector setup).
    - **To:** click the field → **Dynamic content** → `RequestorEmail`.
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
    - **Body:**
