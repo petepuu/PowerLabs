@@ -79,11 +79,12 @@ labeled with the part and step it belongs to. To use your own captures:
    - Plural name auto-fills to `Maintenance Requests`.
 4. Select **Save**. Dataverse creates the table with a primary column
    **Name** (rename its display name to `Title` via the column settings if you like).
-5. Add these columns using **+ New column** (in the table designer or the columns view):
+5. Select the **+** next to the columns list to open the **New column** panel.
 
    ![Opening the New column panel with the + button](images/new-column.png)
-   *Select the **+** next to the columns list to open the **New column** panel,
-   then set Display name, Data type, and Format.*
+   *Select the **+** next to the columns list to open the **New column** panel.*
+
+6. Add these columns by defining **Display name**, **Data type**, and **Format**.
 
    | Display name  | Data type            | Notes                                            |
    |---------------|----------------------|--------------------------------------------------|
@@ -93,7 +94,7 @@ labeled with the part and step it belongs to. To use your own captures:
    | `Status`      | Choice               | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text (Email format) | Who logged it                       |
 
-6. **Save** the table. Leave the designer open (optional: add 1–2 sample rows
+7. **Save** the table. Leave the designer open (optional: add 1–2 sample rows
    via **Edit** → **+ New row**).
 
    ![Maintenance Request table with custom columns](images/02-table-columns.png)
