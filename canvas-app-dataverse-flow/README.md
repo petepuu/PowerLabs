@@ -50,6 +50,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `02-table-columns.png` | Part 1 – Table columns |
 | `new-column.png` | Part 1 – Opening the New column panel |
 | `sync-global-choice.png` | Part 1 – Choice: Sync with global choice = No |
+| `03-new-instant-flow.png` | Part 2 – Create instant cloud flow |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
@@ -115,6 +116,9 @@ You'll build the flow first so the app can call it.
 
 1. Go to **https://make.powerautomate.com** (same environment).
 2. Select **Create** → **Instant cloud flow**.
+
+   ![Creating a new instant cloud flow](images/03-new-instant-flow.png)
+
 3. Name it `Notify Maintenance Request`.
 4. Choose the trigger **When Power Apps calls a flow (V2)** → **Create**.
 5. On the **PowerApps (V2)** trigger, select **+ Add an input**:
