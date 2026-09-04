@@ -186,8 +186,11 @@ You'll build the flow first so the app can call it.
     expression.
 
     ![Returning the Result output from the flow](images/03-respond-to-app-2.png)
-11. Type or copy-paste this expression `actions('SendEmail').status` to the field
-    and click **Add**.
+11. Type or copy-paste this expression to the field and click **Add**:
+
+    ```
+    actions('SendEmail').status
+    ```
 
     ![Adding the SendEmail status expression](images/03-respond-to-app-3.png)
 12. **Save** the flow.
