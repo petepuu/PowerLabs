@@ -60,6 +60,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-sendanemail-to.png` | Part 2 – Select RequestorEmail for To |
 | `03-sendanemail-subject.png` | Part 2 – Subject with dynamic content |
 | `03-sendanemail-priority.png` | Part 2 – Priority dynamic content in Body |
+| `03-respond-to-app.png` | Part 2 – Respond to a PowerApp or flow |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
@@ -174,6 +175,8 @@ You'll build the flow first so the app can call it.
      ![Inserting Priority dynamic content in the Body](images/03-sendanemail-priority.png)
 9. Add **+ New step** → **Respond to a PowerApp or flow** and return
    an output `Result` (Text) = `Sent`. This lets the app read a response.
+
+   ![Respond to a PowerApp or flow action](images/03-respond-to-app.png)
 10. **Save** the flow.
 
    ![Send an email V2 action using dynamic content](images/04-flow-send-email.png)
