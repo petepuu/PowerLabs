@@ -138,7 +138,8 @@ You'll build the flow first so the app can call it.
 
    ![Adding a new action to the flow](images/03-new-action.png)
 
-6. Search and select **Send an email** action.
+6. Search for send an email and select **Office 365 Outlook** > **Send an email
+   (V2)** action.
 
    ![Searching for the Send an email action](images/03-send-an-email-action.png)
 
