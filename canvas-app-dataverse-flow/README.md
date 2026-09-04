@@ -1,6 +1,6 @@
 # Lab: Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
 
-**Duration:** ~40 minutes
+**Duration:** ~30 minutes (40 with the optional approvals part)
 **Level:** Beginner
 **Product area:** Microsoft Power Platform (Power Apps, Dataverse, Power Automate)
 
@@ -13,8 +13,8 @@ maintenance requests. In this lab you will:
 2. Build a **Canvas Power App** to add and view requests.
 3. Create a **Power Automate cloud flow** and call it from the app to send a
    confirmation notification.
-4. Add an **approval** so a manager approves each request and the record's
-   **Status** updates automatically based on the decision.
+4. *(Optional)* Add an **approval** so a manager approves each request and the
+   record's **Status** updates automatically based on the decision.
 
 ## Prerequisites
 
@@ -22,9 +22,9 @@ maintenance requests. In this lab you will:
   (a Developer environment works — https://make.powerapps.com).
 - A license or trial that includes Power Apps and Power Automate.
 - A modern browser (Edge/Chrome).
-- ~40 minutes.
-- For Part 5 (approvals), the **Approvals** connector (included with most
-  Microsoft 365 plans).
+- ~30 minutes (≈40 with the optional Part 5).
+- For the optional Part 5 (approvals), the **Approvals** connector (included with
+  most Microsoft 365 plans).
 
 > Tip: If you don't have an environment, sign up for the free
 > **Power Apps Developer Plan** at https://powerapps.microsoft.com/developerplan/.
@@ -48,6 +48,7 @@ labeled with the part and step it belongs to. To use your own captures:
 |-------|------|
 | `01-new-table.png` | Part 1 – Tables › New table |
 | `02-table-columns.png` | Part 1 – Table columns |
+| `new-column.png` | Part 1 – Opening the New column panel |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
@@ -79,6 +80,10 @@ labeled with the part and step it belongs to. To use your own captures:
 4. Select **Save**. Dataverse creates the table with a primary column
    **Name** (rename its display name to `Title` via the column settings if you like).
 5. Add these columns using **+ New column** (in the table designer or the columns view):
+
+   ![Opening the New column panel with the + button](images/new-column.png)
+   *Select the **+** next to the columns list to open the **New column** panel,
+   then set Display name, Data type, and Format.*
 
    | Display name  | Data type            | Notes                                            |
    |---------------|----------------------|--------------------------------------------------|
@@ -248,7 +253,11 @@ flow, which sends the confirmation email.
 
 ---
 
-## Part 5 — Add an approval (~10 min)
+## Part 5 — Add an approval (optional, ~10 min)
+
+> **Optional.** Skip this part if you only have 30 minutes — Parts 1–4 are a
+> complete, working app. Do this part to take the lab to ~40 minutes and learn
+> approvals.
 
 Now extend the flow so a manager approves each request, and the Dataverse
 **Status** updates automatically based on the decision.
@@ -308,10 +317,11 @@ Now extend the flow so a manager approves each request, and the Dataverse
 4. Check your inbox for the `Request received: Broken AC` email.
 5. In Power Automate → **My flows** → `Notify Maintenance Request` →
    **Run history** to confirm a successful run.
-6. **Approve the request:** open the approval from the email, the **Approvals**
-   app in Teams, or **Power Automate → Approvals → Received**, and select
-   **Approve**. Confirm the record's **Status** changed to `In Progress` in the
-   app gallery (or in the table's data view).
+6. *(Optional — only if you did Part 5)* **Approve the request:** open the
+   approval from the email, the **Approvals** app in Teams, or **Power Automate →
+   Approvals → Received**, and select **Approve**. Confirm the record's
+   **Status** changed to `In Progress` in the app gallery (or in the table's data
+   view).
 
 ![Confirmation email and successful flow run history](images/10-test-email.png)
 *The confirmation email plus a successful run in the flow's run history.*
