@@ -36,7 +36,7 @@ labeled with the part and step it belongs to. To use your own captures:
 
 1. Take a screenshot of the step in the maker portal.
 2. Save it into the `images/` folder, **overwriting the matching filename**
-   (e.g., `images/01-new-table.png`) — keep the same name and the doc updates
+   (e.g., `images/P1-new-table.png`) — keep the same name and the doc updates
    automatically, no Markdown edits needed.
 3. Recommended: **1200×675** (16:9) PNG, and crop out any personal/tenant
    details before publishing publicly.
@@ -46,9 +46,9 @@ labeled with the part and step it belongs to. To use your own captures:
 
 | Image | Step |
 |-------|------|
-| `01-new-table.png` | Part 1 – Tables › New table |
-| `02-table-columns.png` | Part 1 – Table columns |
-| `new-column.png` | Part 1 – Opening the New column panel |
+| `P1-new-table.png` | Part 1 – Tables › New table |
+| `P1-table-columns.png` | Part 1 – Table columns |
+| `P1-new-column.png` | Part 1 – Opening the New column panel |
 | `sync-global-choice.png` | Part 1 – Choice: Sync with global choice = No |
 | `03-new-instant-flow.png` | Part 2 – Create instant cloud flow |
 | `03-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
@@ -85,7 +85,7 @@ labeled with the part and step it belongs to. To use your own captures:
    **Table (advanced properties)** (this opens the properties panel where you can
    set the display name).
 
-   ![Creating a new Dataverse table from the Tables area](images/01-new-table.png)
+   ![Creating a new Dataverse table from the Tables area](images/P1-new-table.png)
 
 3. In the properties panel enter:
    - **Display name:** `Maintenance Request`
@@ -94,7 +94,7 @@ labeled with the part and step it belongs to. To use your own captures:
    **Name** (rename its display name to `Title` via the column settings if you like).
 5. Select the **+** next to the columns list to open the **New column** panel.
 
-   ![Opening the New column panel with the + button](images/new-column.png)
+   ![Opening the New column panel with the + button](images/P1-new-column.png)
 
 6. Add these columns by defining **Display name**, **Data type**, and **Format**.
 
@@ -116,7 +116,7 @@ labeled with the part and step it belongs to. To use your own captures:
 7. Your table should now look like this. *(Optional)* Add a couple of sample rows
    via **Edit** → **+ New row**.
 
-   ![Maintenance Request table with custom columns](images/02-table-columns.png)
+   ![Maintenance Request table with custom columns](images/P1-table-columns.png)
 
 ✅ **Checkpoint:** You have a `Maintenance Request` table with custom columns.
 
