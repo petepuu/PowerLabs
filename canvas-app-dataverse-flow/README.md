@@ -60,10 +60,12 @@ labeled with the part and step it belongs to. To use your own captures:
 
 1. Go to **https://make.powerapps.com** and confirm your environment
    (top-right environment picker).
-2. In the left nav, select **Tables** → **+ New table** → **New table**.
+2. In the left nav, select **Tables** → **+ New table** →
+   **Table (advanced properties)** (this opens the properties panel where you can
+   set the display name).
 
    ![Creating a new Dataverse table from the Tables area](images/01-new-table.png)
-   *Tables → + New table → New table.*
+   *Tables → + New table → Table (advanced properties).*
 
 3. In the properties panel enter:
    - **Display name:** `Maintenance Request`
