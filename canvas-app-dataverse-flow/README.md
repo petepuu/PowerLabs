@@ -54,6 +54,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-new-instant-flow-2.png` | Part 2 – Name flow + choose trigger |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `03-new-action.png` | Part 2 – Add a new action |
+| `03-send-an-email-action.png` | Part 2 – Search Send an email action |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
@@ -137,8 +138,12 @@ You'll build the flow first so the app can call it.
 
    ![Adding a new action to the flow](images/03-new-action.png)
 
-6. Search **Office 365 Outlook** → action **Send an email (V2)** (or use **Send
-   me an email notification** if you prefer no connector setup).
+6. Search **Send an email** action.
+
+   ![Searching for the Send an email action](images/03-send-an-email-action.png)
+
+7. Select **Send an email (V2)** (or use **Send me an email notification** if you
+   prefer no connector setup) and configure it:
    - **To:** click the field → **Dynamic content** → `RequestorEmail`.
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
    - **Body:**
@@ -149,7 +154,7 @@ You'll build the flow first so the app can call it.
      ```
      (Use the **Dynamic content** picker to insert `RequestTitle` and `Priority`
      instead of typing the tokens.)
-7. *(Optional)* Add **+ New step** → **Respond to a PowerApp or flow** and return
+8. *(Optional)* Add **+ New step** → **Respond to a PowerApp or flow** and return
    an output `Result` (Text) = `Sent`. This lets the app read a response.
 8. **Save** the flow.
 
