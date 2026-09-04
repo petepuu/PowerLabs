@@ -57,6 +57,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-send-an-email-action.png` | Part 2 – Search Send an email action |
 | `03-outlook-connection.png` | Part 2 – Sign in to create the connection |
 | `03-sendanemail-dynamic-content.png` | Part 2 – Enable Dynamic content for To |
+| `03-sendanemail-to.png` | Part 2 – Select RequestorEmail for To |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
@@ -150,9 +151,12 @@ You'll build the flow first so the app can call it.
    ![Signing in to create the Office 365 Outlook connection](images/03-outlook-connection.png)
 
 8. Configure **Send an email (V2)** action like below:
-   - **To:** Enable Dynamic content for the **To** field.
+   - Enable Dynamic content for the **To** field.
 
      ![Enabling Dynamic content for the To field](images/03-sendanemail-dynamic-content.png)
+   - **To:** `RequestorEmail`.
+
+     ![Selecting RequestorEmail for the To field](images/03-sendanemail-to.png)
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
    - **Body:**
      ```
