@@ -49,6 +49,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `01-new-table.png` | Part 1 – Tables › New table |
 | `02-table-columns.png` | Part 1 – Table columns |
 | `new-column.png` | Part 1 – Opening the New column panel |
+| `sync-global-choice.png` | Part 1 – Choice: Sync with global choice = No |
 | `03-flow-trigger-inputs.png` | Part 2 – PowerApps (V2) trigger inputs |
 | `04-flow-send-email.png` | Part 2 – Send an email (V2) |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
@@ -95,6 +96,8 @@ labeled with the part and step it belongs to. To use your own captures:
    > **Note (Choice columns):** For `Priority` and `Status`, when the **New
    > column** panel asks **Sync with global choice?**, set it to **No** so you
    > create a local choice with your own options for this table.
+
+   ![Sync with global choice set to No](images/sync-global-choice.png)
 
 7. **Save** the table. Leave the designer open (optional: add 1–2 sample rows
    via **Edit** → **+ New row**).
