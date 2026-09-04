@@ -72,7 +72,6 @@ labeled with the part and step it belongs to. To use your own captures:
    set the display name).
 
    ![Creating a new Dataverse table from the Tables area](images/01-new-table.png)
-   *Tables → + New table → Table (advanced properties).*
 
 3. In the properties panel enter:
    - **Display name:** `Maintenance Request`
@@ -82,7 +81,6 @@ labeled with the part and step it belongs to. To use your own captures:
 5. Select the **+** next to the columns list to open the **New column** panel.
 
    ![Opening the New column panel with the + button](images/new-column.png)
-   *Select the **+** next to the columns list to open the **New column** panel.*
 
 6. Add these columns by defining **Display name**, **Data type**, and **Format**.
 
@@ -94,11 +92,14 @@ labeled with the part and step it belongs to. To use your own captures:
    | `Status`      | Choice               | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text (Email format) | Who logged it                       |
 
+   > **Note (Choice columns):** For `Priority` and `Status`, when the **New
+   > column** panel asks **Sync with global choice?**, set it to **No** so you
+   > create a local choice with your own options for this table.
+
 7. **Save** the table. Leave the designer open (optional: add 1–2 sample rows
    via **Edit** → **+ New row**).
 
    ![Maintenance Request table with custom columns](images/02-table-columns.png)
-   *The Maintenance Request table showing the custom columns.*
 
 ✅ **Checkpoint:** You have a `Maintenance Request` table with custom columns.
 
@@ -118,7 +119,6 @@ You'll build the flow first so the app can call it.
    - Add a **Text** input named `Priority`.
 
    ![PowerApps V2 trigger with three text inputs](images/03-flow-trigger-inputs.png)
-   *The PowerApps (V2) trigger with RequestTitle, RequestorEmail, and Priority inputs.*
 
 6. Select **+ New step** → search **Office 365 Outlook** → action
    **Send an email (V2)** (or use **Send me an email notification** if you
@@ -138,7 +138,6 @@ You'll build the flow first so the app can call it.
 8. **Save** the flow.
 
    ![Send an email V2 action using dynamic content](images/04-flow-send-email.png)
-   *Send an email (V2) with dynamic content from the trigger inputs.*
 
 ✅ **Checkpoint:** A flow named `Notify Maintenance Request` accepts 3 inputs and
 sends an email.
@@ -158,7 +157,6 @@ sends an email.
    - **Save**. The screen now resizes to fill the browser/device.
 
    ![Settings › Display with Scale to fit turned off](images/responsive-scale-to-fit.png)
-   *Settings → Display → Scale to fit = Off (this makes the app responsive).*
 
 3. **Make the screen fluid:** select the **Screen**, set **Width** to
    `Max(App.Width, App.MinScreenWidth)` and **Height** to
@@ -173,7 +171,6 @@ sends an email.
    `Maintenance Request` → add the table.
 
    ![Adding the Maintenance Request Dataverse data source](images/05-canvas-add-data.png)
-   *Data → + Add data → Maintenance Request.*
 
 6. **Add a gallery (view records):**
    - **Insert** → **Vertical gallery** (place it inside the container) → choose
@@ -188,7 +185,6 @@ sends an email.
      (e.g. `Parent.Width * 0.4`).
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
-   *A vertical gallery showing Title, Location, and Priority.*
 
 7. **Add an input form (create records):**
    - **Insert** → **Edit form** (place it inside the container) → data source
@@ -207,7 +203,6 @@ sends an email.
      (replace `Form1` with your form's name).
 
    ![Edit form with fields and a Submit button](images/07-edit-form.png)
-   *An edit form (FormMode.New) with a Submit button.*
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
@@ -228,7 +223,6 @@ and the layout reflows when you resize the window.
    Adding it makes the flow available as `NotifyMaintenanceRequest.Run(...)`.
 
    ![Adding the flow to the app from the Power Automate pane](images/08-add-flow-to-app.png)
-   *Power Automate pane → + Add flow → Notify Maintenance Request.*
 
 3. Set the button **OnSelect** to submit the form, then call the flow with the
    form values:
@@ -247,7 +241,6 @@ and the layout reflows when you resize the window.
 4. **Save** (Ctrl+S) and then **Preview** the app (F5 / ▶ Play).
 
    ![Button OnSelect calling the flow with form values](images/09-button-onselect.png)
-   *The Submit button's OnSelect: SubmitForm + flow.Run(...) + Notify.*
 
 ✅ **Checkpoint:** Submitting the form creates a Dataverse row **and** triggers the
 flow, which sends the confirmation email.
@@ -274,7 +267,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
    - **Details:** add `Priority: ` + dynamic content `Priority`.
 
    ![Start and wait for an approval action](images/11-approval-action.png)
-   *The Approvals "Start and wait for an approval" action.*
 
 3. Add **+ New step** → **Condition**. Set it to:
    `Outcome` (dynamic content from the approval) **is equal to** `Approve`.
@@ -289,7 +281,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
      value (reuse `New`, or add a `Rejected` choice to the table).
 
    ![Condition on approval Outcome updating Status](images/12-approval-condition.png)
-   *Branching on the approval Outcome to update the row Status.*
 
 5. *(Optional)* In each branch add a **Send an email (V2)** action to tell the
    requestor the outcome.
@@ -325,7 +316,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
    view).
 
 ![Confirmation email and successful flow run history](images/10-test-email.png)
-*The confirmation email plus a successful run in the flow's run history.*
 
 ---
 
