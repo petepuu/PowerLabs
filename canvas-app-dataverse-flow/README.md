@@ -177,7 +177,8 @@ You'll build the flow first so the app can call it.
 9. Add **+ New step** → **Respond to a PowerApp or flow**.
 
    ![Respond to a PowerApp or flow action](images/03-respond-to-app.png)
-10. Return an output `Result` (Text) = **Sent**. This lets the app read a response.
+10. Add output (Text) with name `Result`, then click the value field and select
+    expression.
 
     ![Returning the Result output from the flow](images/03-respond-to-app-2.png)
 11. **Save** the flow.
