@@ -154,7 +154,7 @@ You'll build the flow first so the app can call it.
    - Enable Dynamic content for the **To** field.
 
      ![Enabling Dynamic content for the To field](images/03-sendanemail-dynamic-content.png)
-   - **To:** `RequestorEmail`.
+   - **To:** click lightning icon and select `RequestorEmail`.
 
      ![Selecting RequestorEmail for the To field](images/03-sendanemail-to.png)
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
