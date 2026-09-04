@@ -64,7 +64,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `03-respond-to-app.png` | Part 2 – Respond to a PowerApp or flow |
 | `03-respond-to-app-2.png` | Part 2 – Return Result output |
 | `03-respond-to-app-3.png` | Part 2 – Add SendEmail status expression |
-| `04-flow-send-email.png` | Part 2 – Send an email (V2) |
+| `03-save-flow.png` | Part 2 – Save the flow |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
@@ -195,7 +195,7 @@ You'll build the flow first so the app can call it.
     ![Adding the SendEmail status expression](images/03-respond-to-app-3.png)
 12. **Save** the flow.
 
-   ![Send an email V2 action using dynamic content](images/04-flow-send-email.png)
+   ![Saving the flow](images/03-save-flow.png)
 
 ✅ **Checkpoint:** A flow named `Notify Maintenance Request` accepts 3 inputs and
 sends an email.
