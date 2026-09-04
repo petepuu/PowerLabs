@@ -138,7 +138,7 @@ You'll build the flow first so the app can call it.
 
    ![Adding a new action to the flow](images/03-new-action.png)
 
-6. Search **Send an email** action.
+6. Search and select **Send an email** action.
 
    ![Searching for the Send an email action](images/03-send-an-email-action.png)
 
