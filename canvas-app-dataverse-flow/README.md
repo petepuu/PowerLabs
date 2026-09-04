@@ -169,14 +169,13 @@ You'll build the flow first so the app can call it.
    - **Subject:** `Request received: ` then insert dynamic content `RequestTitle`.
 
      ![Setting the Subject with dynamic content](images/P2-sendanemail-subject.png)
-   - **Body:**
+   - **Body:** Copy following text to it and use the **Dynamic content** picker
+     to insert **RequestTitle** and **Priority** instead of typing the tokens.
      ```
      Your maintenance request "@{triggerBody()['text']}" was logged.
      Priority: (insert Priority dynamic content)
      We'll follow up shortly. — Contoso Facilities
      ```
-     (Use the **Dynamic content** picker to insert `RequestTitle` and `Priority`
-     instead of typing the tokens.)
 
      ![Inserting Priority dynamic content in the Body](images/P2-sendanemail-priority.png)
 9. Add **+ New step** → **Respond to a PowerApp or flow**.
