@@ -70,6 +70,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P4-add-header.png` | Part 3 – Add Text label to header |
 | `P4-header-conf.png` | Part 3 – Configure header label |
 | `P4-add-data.png` | Part 3 – Add Dataverse data source |
+| `P4-add-gallery.png` | Part 3 – Add vertical gallery |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
 | `08-add-flow-to-app.png` | Part 4 – Add flow to app |
@@ -230,9 +231,10 @@ sends an email.
 
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
-6. **Add a gallery (view records):**
-   - **Insert** → **Vertical gallery** (place it inside the container) → choose
-     the `Maintenance Requests` data source.
+6. Click **+** in the main area (main container) and add vertical gallery control.
+
+   ![Adding a vertical gallery control](images/P4-add-gallery.png)
+   - Choose the `Maintenance Requests` data source.
    - Set the gallery **Layout** to *Title, subtitle, and body* and map:
      - Title → `Title`
      - Subtitle → `Location`
