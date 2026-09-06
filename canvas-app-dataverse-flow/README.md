@@ -183,8 +183,7 @@ sends an email.
      - Body → `Priority` (choice → use `.Value` if needed:
        `ThisItem.Priority.Value`).
 9. For responsiveness, avoid fixed X/Y — let the container position it, and set
-   **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions
-   (e.g. `Parent.Width * 0.5`).
+   **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions.
    - Width: `Parent.Width * 0.5`
    - Height: `Parent.Height`
 
