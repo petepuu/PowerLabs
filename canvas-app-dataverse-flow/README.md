@@ -225,8 +225,8 @@ sends an email.
    - Flexible width: On
 
    ![Configuring the header label](images/P4-header-conf.png)
-5. **Connect the data:** left rail **Data** → **+ Add data** → search
-   `Maintenance Request` → add the table.
+5. **Connect the data:** left rail **Data** → **+ Add data** → search/select
+   `Maintenance Request`.
 
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
