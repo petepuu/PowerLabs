@@ -67,6 +67,8 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P2-save-flow.png` | Part 2 – Save the flow |
 | `P4-create-app.png` | Part 3 – Create from blank |
 | `P4-responsive-app.png` | Part 3 – Select Responsive |
+| `P4-add-header.png` | Part 3 – Add Text label to header |
+| `P4-header-conf.png` | Part 3 – Configure header label |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
@@ -212,21 +214,32 @@ sends an email.
 
    ![Selecting the Responsive app option](images/P4-responsive-app.png)
 
-3. **Make the screen fluid:** select the **Screen**, set **Width** to
+3. Click **+** in header area and select **Text label**.
+
+   ![Adding a Text label to the header](images/P4-add-header.png)
+4. Configure control in properties pane like below:
+   - Text: `Maintenance Request`
+   - Font: 24
+   - Text alignment: Center
+   - Auto height: On
+   - Flexible width: On
+
+   ![Configuring the header label](images/P4-header-conf.png)
+5. **Make the screen fluid:** select the **Screen**, set **Width** to
    `Max(App.Width, App.MinScreenWidth)` and **Height** to
    `Max(App.Height, App.MinScreenHeight)` so controls have the full viewport to
    respond to. *(Optional but recommended for true responsiveness.)*
-4. **Add a responsive container:** **Insert** → **Layout** →
+6. **Add a responsive container:** **Insert** → **Layout** →
    **Horizontal container** (or **Vertical container**). Set the container's
    **Width** = `Parent.Width` and **Height** = `Parent.Height`. Place your
    gallery and form **inside** this container — containers auto-distribute space
    as the window resizes, which is the key to a responsive app.
-5. **Connect the data:** left rail **Data** → **+ Add data** → search
+7. **Connect the data:** left rail **Data** → **+ Add data** → search
    `Maintenance Request` → add the table.
 
    ![Adding the Maintenance Request Dataverse data source](images/05-canvas-add-data.png)
 
-6. **Add a gallery (view records):**
+8. **Add a gallery (view records):**
    - **Insert** → **Vertical gallery** (place it inside the container) → choose
      the `Maintenance Requests` data source.
    - Set the gallery **Layout** to *Title, subtitle, and body* and map:
@@ -240,7 +253,7 @@ sends an email.
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-7. **Add an input form (create records):**
+9. **Add an input form (create records):**
    - **Insert** → **Edit form** (place it inside the container) → data source
      `Maintenance Requests`.
    - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -248,15 +261,15 @@ sends an email.
    - Set the form **DefaultMode** to `FormMode.New`.
    - Set the form **Width** to fill the remaining container space
      (e.g. `Parent.Width * 0.6`).
-8. **Add a Submit button:**
-   - **Insert** → **Button**, label it `Submit`.
-   - Set its **OnSelect** to:
-     ```powerfx
-     SubmitForm(Form1)
-     ```
-     (replace `Form1` with your form's name).
+10. **Add a Submit button:**
+    - **Insert** → **Button**, label it `Submit`.
+    - Set its **OnSelect** to:
+      ```powerfx
+      SubmitForm(Form1)
+      ```
+      (replace `Form1` with your form's name).
 
-   ![Edit form with fields and a Submit button](images/07-edit-form.png)
+    ![Edit form with fields and a Submit button](images/07-edit-form.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
