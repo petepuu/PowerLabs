@@ -69,7 +69,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P4-responsive-app.png` | Part 3 – Select Responsive |
 | `P4-add-header.png` | Part 3 – Add Text label to header |
 | `P4-header-conf.png` | Part 3 – Configure header label |
-| `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
+| `P4-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
 | `08-add-flow-to-app.png` | Part 4 – Add flow to app |
@@ -228,7 +228,7 @@ sends an email.
 5. **Connect the data:** left rail **Data** → **+ Add data** → search
    `Maintenance Request` → add the table.
 
-   ![Adding the Maintenance Request Dataverse data source](images/05-canvas-add-data.png)
+   ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
 6. **Add a gallery (view records):**
    - **Insert** → **Vertical gallery** (place it inside the container) → choose
