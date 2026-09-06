@@ -231,7 +231,7 @@ sends an email.
 
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
-6. Click **+** in the main area (main container) and add vertical gallery control.
+6. Click **+** in the main area (main container) and add **Vertical gallery** control.
 
    ![Adding a vertical gallery control](images/P4-add-gallery.png)
    - Choose the `Maintenance Requests` data source.
