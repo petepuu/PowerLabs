@@ -65,8 +65,8 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P2-respond-to-app-2.png` | Part 2 – Return Result output |
 | `P2-respond-to-app-3.png` | Part 2 – Add SendEmail status expression |
 | `P2-save-flow.png` | Part 2 – Save the flow |
-| `04-create-app.png` | Part 3 – Create from blank |
-| `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
+| `P4-create-app.png` | Part 3 – Create from blank |
+| `P4-responsive-app.png` | Part 3 – Select Responsive |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
@@ -207,14 +207,10 @@ sends an email.
 1. Back in **https://make.powerapps.com/**, select **+ Create** → **Create from
    blank**.
 
-   ![Create from blank in Power Apps](images/04-create-app.png)
-2. **Turn on responsive layout:** go to **Settings** (gear ⚙️ top-right) →
-   **Display**, then:
-   - Turn **Scale to fit** **Off** (this also turns off *Lock aspect ratio*).
-   - Leave **Orientation** as you like.
-   - **Save**. The screen now resizes to fill the browser/device.
+   ![Create from blank in Power Apps](images/P4-create-app.png)
+2. Select **Responsive**.
 
-   ![Settings › Display with Scale to fit turned off](images/responsive-scale-to-fit.png)
+   ![Selecting the Responsive app option](images/P4-responsive-app.png)
 
 3. **Make the screen fluid:** select the **Screen**, set **Width** to
    `Max(App.Width, App.MinScreenWidth)` and **Height** to
@@ -402,7 +398,7 @@ Now extend the flow so a manager approves each request, and the Dataverse
 ## What you learned
 
 - Creating a **custom Dataverse table** with typed and choice columns.
-- Building a **responsive Canvas app** (Scale to fit off + layout containers)
+- Building a **responsive Canvas app** (Responsive layout + layout containers)
   that reads (gallery) and writes (edit form) Dataverse data.
 - Authoring an **instant Power Automate cloud flow** with PowerApps (V2) inputs.
 - **Calling the flow from Power Fx** using `<FlowName>.Run(...)` and passing form values.
