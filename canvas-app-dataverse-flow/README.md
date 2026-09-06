@@ -1,4 +1,4 @@
-# Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
+# Lab: Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
 
 **Duration:** ~30 minutes (40 with the optional approvals part)
 **Level:** Beginner
@@ -225,21 +225,12 @@ sends an email.
    - Flexible width: On
 
    ![Configuring the header label](images/P4-header-conf.png)
-5. **Make the screen fluid:** select the **Screen**, set **Width** to
-   `Max(App.Width, App.MinScreenWidth)` and **Height** to
-   `Max(App.Height, App.MinScreenHeight)` so controls have the full viewport to
-   respond to. *(Optional but recommended for true responsiveness.)*
-6. **Add a responsive container:** **Insert** → **Layout** →
-   **Horizontal container** (or **Vertical container**). Set the container's
-   **Width** = `Parent.Width` and **Height** = `Parent.Height`. Place your
-   gallery and form **inside** this container — containers auto-distribute space
-   as the window resizes, which is the key to a responsive app.
-7. **Connect the data:** left rail **Data** → **+ Add data** → search
+5. **Connect the data:** left rail **Data** → **+ Add data** → search
    `Maintenance Request` → add the table.
 
    ![Adding the Maintenance Request Dataverse data source](images/05-canvas-add-data.png)
 
-8. **Add a gallery (view records):**
+6. **Add a gallery (view records):**
    - **Insert** → **Vertical gallery** (place it inside the container) → choose
      the `Maintenance Requests` data source.
    - Set the gallery **Layout** to *Title, subtitle, and body* and map:
@@ -253,7 +244,7 @@ sends an email.
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-9. **Add an input form (create records):**
+7. **Add an input form (create records):**
    - **Insert** → **Edit form** (place it inside the container) → data source
      `Maintenance Requests`.
    - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -261,15 +252,15 @@ sends an email.
    - Set the form **DefaultMode** to `FormMode.New`.
    - Set the form **Width** to fill the remaining container space
      (e.g. `Parent.Width * 0.6`).
-10. **Add a Submit button:**
-    - **Insert** → **Button**, label it `Submit`.
-    - Set its **OnSelect** to:
-      ```powerfx
-      SubmitForm(Form1)
-      ```
-      (replace `Form1` with your form's name).
+8. **Add a Submit button:**
+   - **Insert** → **Button**, label it `Submit`.
+   - Set its **OnSelect** to:
+     ```powerfx
+     SubmitForm(Form1)
+     ```
+     (replace `Form1` with your form's name).
 
-    ![Edit form with fields and a Submit button](images/07-edit-form.png)
+   ![Edit form with fields and a Submit button](images/07-edit-form.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
