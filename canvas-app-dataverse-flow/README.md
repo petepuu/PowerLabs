@@ -71,6 +71,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P4-header-conf.png` | Part 3 – Configure header label |
 | `P4-add-data.png` | Part 3 – Add Dataverse data source |
 | `P4-add-gallery.png` | Part 3 – Add vertical gallery |
+| `P4-select-gallery-data.png` | Part 3 – Select gallery data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
 | `08-add-flow-to-app.png` | Part 4 – Add flow to app |
@@ -234,7 +235,9 @@ sends an email.
 6. Click **+** in the main area (main container) and add **Vertical gallery** control.
 
    ![Adding a vertical gallery control](images/P4-add-gallery.png)
-   - Choose the `Maintenance Requests` data source.
+7. Click **Data** and select **Maintenance Requests**.
+
+   ![Selecting the gallery data source](images/P4-select-gallery-data.png)
    - Set the gallery **Layout** to *Title, subtitle, and body* and map:
      - Title → `Title`
      - Subtitle → `Location`
@@ -246,7 +249,7 @@ sends an email.
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-7. **Add an input form (create records):**
+8. **Add an input form (create records):**
    - **Insert** → **Edit form** (place it inside the container) → data source
      `Maintenance Requests`.
    - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -254,7 +257,7 @@ sends an email.
    - Set the form **DefaultMode** to `FormMode.New`.
    - Set the form **Width** to fill the remaining container space
      (e.g. `Parent.Width * 0.6`).
-8. **Add a Submit button:**
+9. **Add a Submit button:**
    - **Insert** → **Button**, label it `Submit`.
    - Set its **OnSelect** to:
      ```powerfx
