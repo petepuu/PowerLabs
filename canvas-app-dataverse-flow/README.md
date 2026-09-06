@@ -72,6 +72,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P4-add-data.png` | Part 3 – Add Dataverse data source |
 | `P4-add-gallery.png` | Part 3 – Add vertical gallery |
 | `P4-select-gallery-data.png` | Part 3 – Select gallery data source |
+| `P4-gallery-layout.png` | Part 3 – Select gallery layout |
 | `06-gallery.png` | Part 3 – Vertical gallery |
 | `07-edit-form.png` | Part 3 – Edit form + Submit |
 | `08-add-flow-to-app.png` | Part 4 – Add flow to app |
@@ -238,7 +239,10 @@ sends an email.
 7. Click **Data** and select **Maintenance Requests**.
 
    ![Selecting the gallery data source](images/P4-select-gallery-data.png)
-   - Set the gallery **Layout** to *Title, subtitle, and body* and map:
+8. Click **Layout** and select **Title, subtitle and body**.
+
+   ![Selecting the gallery layout](images/P4-gallery-layout.png)
+   - Map the fields:
      - Title → `Title`
      - Subtitle → `Location`
      - Body → `Priority` (choice → use `.Value` if needed:
@@ -249,7 +253,7 @@ sends an email.
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-8. **Add an input form (create records):**
+9. **Add an input form (create records):**
    - **Insert** → **Edit form** (place it inside the container) → data source
      `Maintenance Requests`.
    - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -257,15 +261,15 @@ sends an email.
    - Set the form **DefaultMode** to `FormMode.New`.
    - Set the form **Width** to fill the remaining container space
      (e.g. `Parent.Width * 0.6`).
-9. **Add a Submit button:**
-   - **Insert** → **Button**, label it `Submit`.
-   - Set its **OnSelect** to:
-     ```powerfx
-     SubmitForm(Form1)
-     ```
-     (replace `Form1` with your form's name).
+10. **Add a Submit button:**
+    - **Insert** → **Button**, label it `Submit`.
+    - Set its **OnSelect** to:
+      ```powerfx
+      SubmitForm(Form1)
+      ```
+      (replace `Form1` with your form's name).
 
-   ![Edit form with fields and a Submit button](images/07-edit-form.png)
+    ![Edit form with fields and a Submit button](images/07-edit-form.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
