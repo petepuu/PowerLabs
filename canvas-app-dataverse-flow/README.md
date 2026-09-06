@@ -1,4 +1,4 @@
-# Lab: Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
+# Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
 
 **Duration:** ~30 minutes (40 with the optional approvals part)
 **Level:** Beginner
