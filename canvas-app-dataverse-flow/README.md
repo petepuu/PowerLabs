@@ -65,6 +65,7 @@ labeled with the part and step it belongs to. To use your own captures:
 | `P2-respond-to-app-2.png` | Part 2 – Return Result output |
 | `P2-respond-to-app-3.png` | Part 2 – Add SendEmail status expression |
 | `P2-save-flow.png` | Part 2 – Save the flow |
+| `04-create-app.png` | Part 3 – Create from blank |
 | `responsive-scale-to-fit.png` | Part 3 – Settings › Display › Scale to fit Off |
 | `05-canvas-add-data.png` | Part 3 – Add Dataverse data source |
 | `06-gallery.png` | Part 3 – Vertical gallery |
@@ -203,10 +204,10 @@ sends an email.
 
 ## Part 3 — Build the Canvas app (responsive) (~10 min)
 
-1. Back in **https://make.powerapps.com**, select **+ Create** →
-   **Blank app** → **Blank canvas app** → **Create**.
-   Name it `Maintenance Requests`. (You can pick either format here — you'll
-   switch it to responsive in the next step.)
+1. Back in **https://make.powerapps.com/**, select **+ Create** → **Create from
+   blank**.
+
+   ![Create from blank in Power Apps](images/04-create-app.png)
 2. **Turn on responsive layout:** go to **Settings** (gear ⚙️ top-right) →
    **Display**, then:
    - Turn **Scale to fit** **Off** (this also turns off *Lock aspect ratio*).
