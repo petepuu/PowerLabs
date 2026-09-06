@@ -182,21 +182,25 @@ sends an email.
      - Subtitle → `Location`
      - Body → `Priority` (choice → use `.Value` if needed:
        `ThisItem.Priority.Value`).
-   - For responsiveness, avoid fixed X/Y — let the container position it, and set
-     **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions
-     (e.g. `Parent.Width * 0.4`).
+9. For responsiveness, avoid fixed X/Y — let the container position it, and set
+   **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions
+   (e.g. `Parent.Width * 0.5`).
+   - Width: `Parent.Width * 0.5`
+   - Height: `Parent.Height`
+
+   ![Setting the gallery width and height](images/P4-gallery-size.png)
 
    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-9. **Add an input form (create records):**
-   - **Insert** → **Edit form** (place it inside the container) → data source
-     `Maintenance Requests`.
-   - In the form's **Fields**, add: `Title`, `Description`, `Location`,
-     `Priority`, `Requestor Email`.
-   - Set the form **DefaultMode** to `FormMode.New`.
-   - Set the form **Width** to fill the remaining container space
-     (e.g. `Parent.Width * 0.6`).
-10. **Add a Submit button:**
+10. **Add an input form (create records):**
+    - **Insert** → **Edit form** (place it inside the container) → data source
+      `Maintenance Requests`.
+    - In the form's **Fields**, add: `Title`, `Description`, `Location`,
+      `Priority`, `Requestor Email`.
+    - Set the form **DefaultMode** to `FormMode.New`.
+    - Set the form **Width** to fill the remaining container space
+      (e.g. `Parent.Width * 0.6`).
+11. **Add a Submit button:**
     - **Insert** → **Button**, label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
