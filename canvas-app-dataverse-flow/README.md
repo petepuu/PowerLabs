@@ -195,14 +195,15 @@ sends an email.
 12. Select main container from tree view and add **Edit form**.
 
     ![Adding an Edit form to the main container](images/P3-add-form.png)
-    - **Insert** → **Edit form** (place it inside the container) → data source
-      `Maintenance Requests`.
+13. Select **Data** and choose **Maintenance requests**.
+
+    ![Selecting the form data source](images/P3-form-data.png)
     - In the form's **Fields**, add: `Title`, `Description`, `Location`,
       `Priority`, `Requestor Email`.
     - Set the form **DefaultMode** to `FormMode.New`.
     - Set the form **Width** to fill the remaining container space
       (e.g. `Parent.Width * 0.6`).
-13. **Add a Submit button:**
+14. **Add a Submit button:**
     - **Insert** → **Button**, label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
