@@ -204,7 +204,6 @@ sends an email.
     ![Keeping only the required form fields](images/P3-form-fields.png)
 15. Set form properties:
     - Columns: **1**
-    - Layout: **Horizontal**
     - Default mode: **New**
     - Item: **Gallery1.Selected**
 
