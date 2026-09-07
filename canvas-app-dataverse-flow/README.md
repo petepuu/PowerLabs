@@ -208,8 +208,11 @@ sends an email.
     - Default mode: **New**
 
     ![Setting the form properties](images/P3-form-props.png)
-16. **Add a Submit button:**
-    - **Insert** → **Button**, label it `Submit`.
+16. Click **+** in the footer container (FooterContainer1) and add **Button**
+    control.
+
+    ![Adding a Button to the footer container](images/P3-add-submit-button.png)
+    - Label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
       SubmitForm(Form1)
