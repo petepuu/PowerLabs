@@ -163,18 +163,22 @@ sends an email.
    - Flexible width: On
 
    ![Configuring the header label](images/P4-header-conf.png)
-5. **Connect the data:** left rail **Data** → **+ Add data** → search/select
+5. Select **MainContainer1** from the tree view and change its
+   **Direction → Horizontal**.
+
+   ![Setting MainContainer1 direction to Horizontal](images/P3-main-container.png)
+6. **Connect the data:** left rail **Data** → **+ Add data** → search/select
    `Maintenance Request`.
 
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
-6. Click **+** in the main area (main container) and add **Vertical gallery** control.
+7. Click **+** in the main area (main container) and add **Vertical gallery** control.
 
    ![Adding a vertical gallery control](images/P4-add-gallery.png)
-7. Click **Data** and select **Maintenance Requests**.
+8. Click **Data** and select **Maintenance Requests**.
 
    ![Selecting the gallery data source](images/P4-select-gallery-data.png)
-8. Click **Layout** and select **Title, subtitle and body**.
+9. Click **Layout** and select **Title, subtitle and body**.
 
    ![Selecting the gallery layout](images/P4-gallery-layout.png)
    - Map the fields:
@@ -182,16 +186,16 @@ sends an email.
      - Subtitle → `Location`
      - Body → `Priority` (choice → use `.Value` if needed:
        `ThisItem.Priority.Value`).
-9. For responsiveness, avoid fixed X/Y — let the container position it, and set
-   **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions.
-   - Width: `Parent.Width * 0.5`
-   - Height: `Parent.Height`
+10. For responsiveness, avoid fixed X/Y — let the container position it, and set
+    **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions.
+    - Width: `Parent.Width * 0.5`
+    - Height: `Parent.Height`
 
-   ![Setting the gallery width and height](images/P4-gallery-size.png)
+    ![Setting the gallery width and height](images/P4-gallery-size.png)
 
-   ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
+    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
 
-10. **Add an input form (create records):**
+11. **Add an input form (create records):**
     - **Insert** → **Edit form** (place it inside the container) → data source
       `Maintenance Requests`.
     - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -199,7 +203,7 @@ sends an email.
     - Set the form **DefaultMode** to `FormMode.New`.
     - Set the form **Width** to fill the remaining container space
       (e.g. `Parent.Width * 0.6`).
-11. **Add a Submit button:**
+12. **Add a Submit button:**
     - **Insert** → **Button**, label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
