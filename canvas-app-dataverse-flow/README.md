@@ -181,18 +181,18 @@ sends an email.
 9. Click **Layout** and select **Title, subtitle and body**.
 
    ![Selecting the gallery layout](images/P4-gallery-layout.png)
-   - Map the fields:
-     - Title → `Title`
-     - Subtitle → `Location`
-     - Body → `Priority` (choice → use `.Value` if needed:
-       `ThisItem.Priority.Value`).
-10. For responsiveness, avoid using fixed width and height. Set these properties:
+10. Map **Subtitle** and **Body** fields:
+    - Subtitle → `ThisItem.Location`
+    - Body → `ThisItem.Priority`
+
+    ![Mapping the gallery Subtitle and Body fields](images/P3-gallery-subtitle-body.png)
+11. For responsiveness, avoid using fixed width and height. Set these properties:
     - Align in container: **Stretch**
     - Width: `Parent.Width * 0.5`
 
     ![Setting the gallery align and width](images/P3-gallery-size.png)
 
-11. **Add an input form (create records):**
+12. **Add an input form (create records):**
     - **Insert** → **Edit form** (place it inside the container) → data source
       `Maintenance Requests`.
     - In the form's **Fields**, add: `Title`, `Description`, `Location`,
@@ -200,7 +200,7 @@ sends an email.
     - Set the form **DefaultMode** to `FormMode.New`.
     - Set the form **Width** to fill the remaining container space
       (e.g. `Parent.Width * 0.6`).
-12. **Add a Submit button:**
+13. **Add a Submit button:**
     - **Insert** → **Button**, label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
