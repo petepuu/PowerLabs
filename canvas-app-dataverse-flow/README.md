@@ -225,6 +225,14 @@ sends an email.
     and add new **Button**.
 
     ![Adding a second button to the footer container](images/P3-add-clear-button.png)
+19. Configure Clear button:
+    - Text: **Clear**
+    - OnSelect:
+      ```powerfx
+      ResetForm(Form1)
+      ```
+
+    ![Configuring the Clear button](images/P3-clear-button-props.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
