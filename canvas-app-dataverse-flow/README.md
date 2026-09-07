@@ -206,6 +206,7 @@ sends an email.
     - Columns: **1**
     - Layout: **Horizontal**
     - Default mode: **New**
+    - Item: **Gallery1.Selected**
 
     ![Setting the form properties](images/P3-form-props.png)
 16. Click **+** in the footer container (FooterContainer1) and add **Button**
