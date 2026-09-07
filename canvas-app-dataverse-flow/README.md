@@ -1,6 +1,6 @@
 # Build a Canvas Power App with a Dataverse Table and a Power Automate Flow
 
-**Duration:** ~30 minutes
+**Duration:** ~35 minutes
 **Level:** Beginner
 **Product area:** Microsoft Power Platform (Power Apps, Dataverse, Power Automate)
 
@@ -16,7 +16,7 @@ maintenance requests. In this lab you will:
 
 ---
 
-## Part 1 — Create the Dataverse table (~7 min)
+## Part 1 — Create the Dataverse table (~8 min)
 
 1. Go to **https://make.powerapps.com** and confirm your environment
    (top-right environment picker).
@@ -61,7 +61,7 @@ maintenance requests. In this lab you will:
 
 ---
 
-## Part 2 — Create the Power Automate cloud flow (~8 min)
+## Part 2 — Create the Power Automate cloud flow (~10 min)
 
 You'll build the flow first so the app can call it.
 
@@ -140,7 +140,7 @@ sends an email.
 
 ---
 
-## Part 3 — Build the Canvas app (responsive) (~10 min)
+## Part 3 — Build the Canvas app (responsive) (~12 min)
 
 1. Back in **https://make.powerapps.com/**, select **+ Create** → **Create from
    blank**.
