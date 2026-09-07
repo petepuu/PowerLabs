@@ -224,9 +224,6 @@ sends an email.
 > preview at different sizes with the browser dev tools device toolbar (F12) to
 > confirm the layout reflows.
 
-✅ **Checkpoint:** You can add a record with the form and see it in the gallery,
-and the layout reflows when you resize the window.
-
 ---
 
 ## Part 4 — Call the flow from the app (~5 min)
