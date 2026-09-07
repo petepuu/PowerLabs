@@ -212,12 +212,14 @@ sends an email.
     control.
 
     ![Adding a Button to the footer container](images/P3-add-submit-button.png)
-    - Label it `Submit`.
-    - Set its **OnSelect** to:
+17. Configure button like below:
+    - Text: **Submit**
+    - OnSelect:
       ```powerfx
-      SubmitForm(Form1)
+      SubmitForm(Form1); ResetForm(Form1)
       ```
-      (replace `Form1` with your form's name).
+
+    ![Configuring the Submit button](images/P3-submit-button-conf.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
