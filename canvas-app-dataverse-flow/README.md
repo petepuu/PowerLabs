@@ -192,7 +192,9 @@ sends an email.
 
     ![Setting the gallery align and width](images/P3-gallery-size.png)
 
-12. **Add an input form (create records):**
+12. Select main container from tree view and add **Edit form**.
+
+    ![Adding an Edit form to the main container](images/P3-add-form.png)
     - **Insert** → **Edit form** (place it inside the container) → data source
       `Maintenance Requests`.
     - In the form's **Fields**, add: `Title`, `Description`, `Location`,
