@@ -202,10 +202,13 @@ sends an email.
     `Priority`, `Requestor Email`.
 
     ![Keeping only the required form fields](images/P3-form-fields.png)
-    - Set the form **DefaultMode** to `FormMode.New`.
-    - Set the form **Width** to fill the remaining container space
-      (e.g. `Parent.Width * 0.6`).
-15. **Add a Submit button:**
+15. Set form properties:
+    - Columns: **1**
+    - Layout: **Horizontal**
+    - Default mode: **New**
+
+    ![Setting the form properties](images/P3-form-props.png)
+16. **Add a Submit button:**
     - **Insert** → **Button**, label it `Submit`.
     - Set its **OnSelect** to:
       ```powerfx
