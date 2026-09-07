@@ -197,7 +197,7 @@ sends an email.
 
     ![Selecting the form data source](images/P3-form-data.png)
 14. Remove all the other fields **except**: `Title`, `Description`, `Location`,
-    `Priority`, `Requestor Email`.
+    `Priority`.
 
     ![Keeping only the required form fields](images/P3-form-fields.png)
 15. Set form properties:
