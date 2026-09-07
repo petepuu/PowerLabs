@@ -186,9 +186,8 @@ sends an email.
      - Subtitle → `Location`
      - Body → `Priority` (choice → use `.Value` if needed:
        `ThisItem.Priority.Value`).
-10. For responsiveness, avoid fixed X/Y — let the container position it. Set these
-    properties:
-    - Align in container: Stretch
+10. For responsiveness, avoid using fixed width and height. Set these properties:
+    - Align in container: **Stretch**
     - Width: `Parent.Width * 0.5`
 
     ![Setting the gallery align and width](images/P3-gallery-size.png)
