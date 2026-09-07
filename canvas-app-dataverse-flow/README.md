@@ -186,14 +186,12 @@ sends an email.
      - Subtitle → `Location`
      - Body → `Priority` (choice → use `.Value` if needed:
        `ThisItem.Priority.Value`).
-10. For responsiveness, avoid fixed X/Y — let the container position it, and set
-    **Width**/**Height** with `Parent.Width` / `Parent.Height` fractions.
+10. For responsiveness, avoid fixed X/Y — let the container position it. Set these
+    properties:
+    - Align in container: Stretch
     - Width: `Parent.Width * 0.5`
-    - Height: `Parent.Height`
 
-    ![Setting the gallery width and height](images/P4-gallery-size.png)
-
-    ![Vertical gallery bound to Maintenance Requests](images/06-gallery.png)
+    ![Setting the gallery align and width](images/P3-gallery-size.png)
 
 11. **Add an input form (create records):**
     - **Insert** → **Edit form** (place it inside the container) → data source
@@ -210,8 +208,6 @@ sends an email.
       SubmitForm(Form1)
       ```
       (replace `Form1` with your form's name).
-
-    ![Edit form with fields and a Submit button](images/07-edit-form.png)
 
 > 💡 **Responsive tips:** Use **layout containers** instead of absolute
 > positioning; size controls relative to `Parent.Width`/`Parent.Height`; and
@@ -231,8 +227,6 @@ and the layout reflows when you resize the window.
    choose `Notify Maintenance Request`.
    Adding it makes the flow available as `NotifyMaintenanceRequest.Run(...)`.
 
-   ![Adding the flow to the app from the Power Automate pane](images/08-add-flow-to-app.png)
-
 3. Set the button **OnSelect** to submit the form, then call the flow with the
    form values:
    ```powerfx
@@ -248,8 +242,6 @@ and the layout reflows when you resize the window.
    > If your flow returns an output, you can capture it:
    > `Set(varResult, NotifyMaintenanceRequest.Run(...).result)`.
 4. **Save** (Ctrl+S) and then **Preview** the app (F5 / ▶ Play).
-
-   ![Button OnSelect calling the flow with form values](images/09-button-onselect.png)
 
 ✅ **Checkpoint:** Submitting the form creates a Dataverse row **and** triggers the
 flow, which sends the confirmation email.
@@ -275,8 +267,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
      real life this would be the facilities manager.
    - **Details:** add `Priority: ` + dynamic content `Priority`.
 
-   ![Start and wait for an approval action](images/11-approval-action.png)
-
 3. Add **+ New step** → **Condition**. Set it to:
    `Outcome` (dynamic content from the approval) **is equal to** `Approve`.
 4. Configure the two branches:
@@ -288,8 +278,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
      - **Status:** `In Progress`.
    - **If no** → **Update a row** the same way, but set **Status** to a rejected
      value (reuse `New`, or add a `Rejected` choice to the table).
-
-   ![Condition on approval Outcome updating Status](images/12-approval-condition.png)
 
 5. *(Optional)* In each branch add a **Send an email (V2)** action to tell the
    requestor the outcome.
@@ -323,8 +311,6 @@ Now extend the flow so a manager approves each request, and the Dataverse
    Approvals → Received**, and select **Approve**. Confirm the record's
    **Status** changed to `In Progress` in the app gallery (or in the table's data
    view).
-
-![Confirmation email and successful flow run history](images/10-test-email.png)
 
 ---
 
