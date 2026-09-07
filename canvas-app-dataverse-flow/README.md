@@ -214,7 +214,7 @@ sends an email.
     - Text: **Submit**
     - OnSelect:
       ```powerfx
-      SubmitForm(Form1); ResetForm(Form1)
+      SubmitForm(Form1)
       ```
 
     ![Configuring the Submit button](images/P3-submit-button-conf.png)
