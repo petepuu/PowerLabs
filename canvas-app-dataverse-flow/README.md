@@ -179,7 +179,7 @@ sends an email.
 9. Click **Layout** and select **Title, subtitle and body**.
 
    ![Selecting the gallery layout](images/P4-gallery-layout.png)
-10. Map **Subtitle** and **Body** fields:
+10. Select Fields and map **Subtitle** and **Body** fields:
     - Subtitle → `ThisItem.Location`
     - Body → `ThisItem.Priority`
 
