@@ -249,20 +249,22 @@ and the layout reflows when you resize the window.
 2. Click **+ Add flow** and select **Notify Maintenance Request**.
 
    ![Adding the Notify Maintenance Request flow](images/P4-add-flow-2.png)
-3. Select the **Submit** button, then set its **OnSelect** to submit the form and
-   call the flow with the form values:
+3. Select the Form control (Form1) and set its **OnSuccess** event to call the
+   flow with the form values:
    ```powerfx
-   SubmitForm(Form1);
    NotifyMaintenanceRequest.Run(
-       Form1.Updates.Title,
-       Form1.Updates.'Requestor Email',
-       Form1.Updates.Priority.Value
+       Form1.LastSubmit.Title,
+       User().Email,
+       Form1.LastSubmit.Priority.Value
    );
-   Notify("Request submitted and notification sent!", NotificationType.Success)
+   Notify("Request submitted and notification sent!", NotificationType.Success);
+   ResetForm(Form1)
    ```
-   > If a field name contains a space, wrap it in single quotes as shown.
-   > If your flow returns an output, you can capture it:
-   > `Set(varResult, NotifyMaintenanceRequest.Run(...).result)`.
+
+   ![Setting the form OnSuccess to call the flow](images/P4-form-onsuccess.png)
+   > `OnSuccess` fires only after the record saves, and `Form1.LastSubmit` holds
+   > the saved record (unlike `Form1.Updates`, which is cleared by `SubmitForm`).
+   > `User().Email` is used because the **Requestor Email** field isn't on the form.
 4. **Save** (Ctrl+S) and then **Preview** the app (F5 / ▶ Play).
 
 ✅ **Checkpoint:** Submitting the form creates a Dataverse row **and** triggers the
