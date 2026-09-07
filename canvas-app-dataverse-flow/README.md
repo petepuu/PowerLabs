@@ -260,7 +260,7 @@ flow, which sends the confirmation email.
 ## Test end-to-end
 
 1. In Preview, fill the form: Title = `Broken AC`, Location = `Bldg 3 / Rm 210`,
-   Priority = `High`, Requestor Email = *your email*.
+   Priority = `High`.
 2. Select **Submit** → the success banner appears.
 3. Confirm the new record shows in the gallery.
 4. Check your inbox for the `Request received: Broken AC` email.
