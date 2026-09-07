@@ -248,14 +248,12 @@ and the layout reflows when you resize the window.
 1. Click three dots from the main left menu and select **Power Automate**.
 
    ![Opening the Power Automate pane](images/P4-add-flow.png)
-2. Select the **Submit** button (or add a second button `Submit & Notify`).
-3. With the button selected, go to the **Power Automate** pane
-   (left rail ⋯ **More** → **Power Automate**) → **+ Add flow** →
-   choose `Notify Maintenance Request`.
-   Adding it makes the flow available as `NotifyMaintenanceRequest.Run(...)`.
+2. Click **+ Add flow** and select **Notify Maintenance Request**.
 
-4. Set the button **OnSelect** to submit the form, then call the flow with the
-   form values:
+   ![Adding the Notify Maintenance Request flow](images/P4-add-flow-2.png)
+   Adding it makes the flow available as `NotifyMaintenanceRequest.Run(...)`.
+3. Select the **Submit** button, then set its **OnSelect** to submit the form and
+   call the flow with the form values:
    ```powerfx
    SubmitForm(Form1);
    NotifyMaintenanceRequest.Run(
@@ -268,7 +266,7 @@ and the layout reflows when you resize the window.
    > If a field name contains a space, wrap it in single quotes as shown.
    > If your flow returns an output, you can capture it:
    > `Set(varResult, NotifyMaintenanceRequest.Run(...).result)`.
-5. **Save** (Ctrl+S) and then **Preview** the app (F5 / ▶ Play).
+4. **Save** (Ctrl+S) and then **Preview** the app (F5 / ▶ Play).
 
 ✅ **Checkpoint:** Submitting the form creates a Dataverse row **and** triggers the
 flow, which sends the confirmation email.
