@@ -133,7 +133,7 @@ sends an email.
 
 ## Part 3 — Build the Canvas app (responsive) (~12 min)
 
-1. Back in **https://make.powerapps.com/**, select **+ Create** → **Create from
+1. Open **https://make.powerapps.com/**, select **+ Create** → **Create from
    blank**.
 
    ![Create from blank in Power Apps](images/P4-create-app.png)
