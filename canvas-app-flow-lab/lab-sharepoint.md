@@ -195,7 +195,7 @@ sends an email.
     ![Adding an Edit form to the main container](images/P3-add-form.png)
 13. Select **Data** and choose **Maintenance Requests**.
 
-    ![Selecting the form data source](images/P3-form-data.png)
+    ![Selecting the form data source](images/P3-form-data-spo.png)
 14. Remove all the other fields **except**: `Title`, `Description`, `Priority`,
     `Location`.
 
