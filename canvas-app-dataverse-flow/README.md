@@ -73,8 +73,8 @@ Dataverse table).
 2. Select **Build** → **List**.
 
    ![Creating a new blank list](images/P1-create-list.png)
-3. Select **List** and provide name `Maintenance Requests` and verify that
-   **My lists** (OneDrive) is selected.
+3. Select **List** and provide name `Maintenance Requests`, verify that
+   **My lists** (OneDrive) is selected and then click **Create list**.
 
    ![Setting up the new list](images/P1-setup-list.png)
 4. The list already has a **Title** column (single line of text). Add the rest via
