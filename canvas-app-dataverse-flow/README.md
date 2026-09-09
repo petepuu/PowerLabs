@@ -59,6 +59,36 @@ maintenance requests. In this lab you will:
 
 ✅ **Checkpoint:** You have a `Maintenance Request` table with custom columns.
 
+### Alternative: use a SharePoint list instead
+
+Prefer SharePoint (or don't have Dataverse)? You can build the whole lab on a
+**SharePoint list** with the same fields — the app and flow steps are almost
+identical (in Power Apps you'd add the SharePoint list as the data source instead
+of the Dataverse table).
+
+1. Go to your SharePoint site → **+ New** → **List** → **Blank list**.
+2. Name it `Maintenance Requests` and select **Create**.
+3. The list already has a **Title** column (single line of text). Add the rest via
+   **+ Add column**:
+
+   | Column name   | Column type            | Notes                                            |
+   |---------------|------------------------|--------------------------------------------------|
+   | `Description` | Multiple lines of text | Details of the issue                             |
+   | `Location`    | Single line of text    | Building / room                                  |
+   | `Priority`    | Choice                 | Choices: `Low`, `Medium`, `High`                 |
+   | `Status`      | Choice                 | Choices: `New`, `In Progress`, `Done` (default `New`) |
+   | `Requestor Email` | Single line of text | Who logged it                                    |
+
+4. *(Optional)* Add a couple of sample items with **+ New**.
+
+> **Notes when using SharePoint instead of Dataverse:**
+> - In Part 3, add data via **Data → + Add data → SharePoint**, pick your site,
+>   then the `Maintenance Requests` list.
+> - Choice columns return a **record** in Power Fx — reference `.Value`
+>   (e.g. `ThisItem.Priority.Value`), same as Dataverse choices.
+> - SharePoint choice fields are written back as a record too; when submitting
+>   from an Edit form this is handled automatically by the form's data card.
+
 ---
 
 ## Part 2 — Create the Power Automate cloud flow (~10 min)
