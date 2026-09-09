@@ -89,9 +89,12 @@ Dataverse table).
    | `Status`      | Choice                 | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text | Who logged it                                    |
 
+6. List should look like this now. Copy your OneDrive site URL (for example to
+   Notepad) as we need the URL in Part 3 when creating the Power App.
+
    ![The list with all columns ready](images/P1-list-ready.png)
 
-6. *(Optional)* Add a couple of sample items with **+ New**.
+7. *(Optional)* Add a couple of sample items with **+ New**.
 
 > **Notes when using SharePoint instead of Dataverse:**
 > - In Power Apps, add data via **Data → + Add data → SharePoint**, pick your site,
@@ -208,51 +211,61 @@ sends an email.
 
    ![Setting MainContainer1 direction to Horizontal](images/P3-main-container.png)
 6. **Connect the data:** left rail **Data** → **+ Add data** → search/select
-   `Maintenance Request`.
+   `Maintenance Request`. **NOTE!** If you are using a List then jump to the next
+   step.
 
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
-7. Click **+** in the main area (main container) and add **Vertical gallery** control.
+7. **NOTE!** Skip this if using Dataverse. When using a **List** (SharePoint),
+   search the **SharePoint** connector, select it, then select an existing
+   connection or create a new one — and provide your OneDrive/SharePoint site URL
+   (the one you copied in Part 1) to pick the `Maintenance Requests` list.
+
+   ![Selecting the SharePoint connector](images/P3-spo-data.png)
+
+   ![Choosing or creating the SharePoint connection](images/P3-spo-conn.png)
+
+8. Click **+** in the main area (main container) and add **Vertical gallery** control.
 
    ![Adding a vertical gallery control](images/P4-add-gallery.png)
-8. Click **Data** and select **Maintenance Requests**.
+9. Click **Data** and select **Maintenance Requests**.
 
    ![Selecting the gallery data source](images/P4-select-gallery-data.png)
-9. Click **Layout** and select **Title, subtitle and body**.
+10. Click **Layout** and select **Title, subtitle and body**.
 
-   ![Selecting the gallery layout](images/P4-gallery-layout.png)
-10. Select Fields and map **Subtitle** and **Body** fields:
+    ![Selecting the gallery layout](images/P4-gallery-layout.png)
+11. Select Fields and map **Subtitle** and **Body** fields:
     - Subtitle → `ThisItem.Location`
     - Body → `ThisItem.Priority`
 
     ![Mapping the gallery Subtitle and Body fields](images/P3-gallery-subtitle-body.png)
-11. For responsiveness, avoid using fixed width and height. Set these properties:
+12. For responsiveness, avoid using fixed width and height. Set these properties:
     - Align in container: **Stretch**
     - Width: `Parent.Width * 0.5`
 
     ![Setting the gallery align and width](images/P3-gallery-size.png)
 
-12. Select main container from tree view and add **Edit form**.
+13. Select main container from tree view and add **Edit form**.
 
     ![Adding an Edit form to the main container](images/P3-add-form.png)
-13. Select **Data** and choose **Maintenance Requests**.
+14. Select **Data** and choose **Maintenance Requests**.
 
     ![Selecting the form data source](images/P3-form-data.png)
-14. Remove all the other fields **except**: `Title`, `Description`, `Priority`,
+15. Remove all the other fields **except**: `Title`, `Description`, `Priority`,
     `Location`.
 
     ![Keeping only the required form fields](images/P3-form-fields.png)
-15. Set form properties:
+16. Set form properties:
     - Columns: **1**
     - Default mode: **New**
     - Item: **Gallery1.Selected**
 
     ![Setting the form properties](images/P3-form-props.png)
-16. Click **+** in the footer container (FooterContainer1) and add **Button**
+17. Click **+** in the footer container (FooterContainer1) and add **Button**
     control.
 
     ![Adding a Button to the footer container](images/P3-add-submit-button.png)
-17. Configure button like below:
+18. Configure button like below:
     - Text: **Submit**
     - OnSelect:
       ```powerfx
