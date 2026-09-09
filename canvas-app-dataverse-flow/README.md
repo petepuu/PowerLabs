@@ -89,6 +89,8 @@ Dataverse table).
    | `Status`      | Choice                 | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text | Who logged it                                    |
 
+   ![The list with all columns ready](images/P1-list-ready.png)
+
 6. *(Optional)* Add a couple of sample items with **+ New**.
 
 > **Notes when using SharePoint instead of Dataverse:**
