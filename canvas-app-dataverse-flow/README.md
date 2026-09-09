@@ -77,7 +77,8 @@ Dataverse table).
    **My lists** (OneDrive) is selected and then click **Create list**.
 
    ![Setting up the new list](images/P1-setup-list.png)
-4. The list already has a **Title** column (single line of text). Add the rest via
+4. When the list is created, click **Go to list**.
+5. The list already has a **Title** column (single line of text). Add the rest via
    **+ Add column**:
 
    | Column name   | Column type            | Notes                                            |
@@ -88,7 +89,7 @@ Dataverse table).
    | `Status`      | Choice                 | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text | Who logged it                                    |
 
-5. *(Optional)* Add a couple of sample items with **+ New**.
+6. *(Optional)* Add a couple of sample items with **+ New**.
 
 > **Notes when using SharePoint instead of Dataverse:**
 > - In Power Apps, add data via **Data → + Add data → SharePoint**, pick your site,
