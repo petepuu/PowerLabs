@@ -70,10 +70,13 @@ Dataverse table).
    site where you want the list.
 
    ![Opening SharePoint from the app launcher](images/P1-sharepoint.png)
-2. Select **+ New** → **List** → **Blank list**.
+2. Select **Build** → **List**.
 
    ![Creating a new blank list](images/P1-create-list.png)
-3. Name it `Maintenance Requests` and select **Create**.
+3. Select **List** and provide name `Maintenance Requests` and verify that
+   **My lists** (OneDrive) is selected.
+
+   ![Setting up the new list](images/P1-setup-list.png)
 4. The list already has a **Title** column (single line of text). Add the rest via
    **+ Add column**:
 
