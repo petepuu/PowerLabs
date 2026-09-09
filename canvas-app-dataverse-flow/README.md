@@ -243,6 +243,11 @@ sends an email.
     - Body → `ThisItem.Priority`
 
     ![Mapping the gallery Subtitle and Body fields](images/P3-gallery-subtitle-body.png)
+
+    > **Using a List (SharePoint)?** Map the same fields — for the choice field
+    > use `ThisItem.Priority.Value`.
+
+    ![Mapping the gallery fields for a SharePoint list](images/P3-spo-gallery-fields.png)
 12. For responsiveness, avoid using fixed width and height. Set these properties:
     - Align in container: **Stretch**
     - Width: `Parent.Width * 0.5`
