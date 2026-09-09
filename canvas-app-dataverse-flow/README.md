@@ -217,13 +217,17 @@ sends an email.
    ![Adding the Maintenance Request Dataverse data source](images/P4-add-data.png)
 
 7. **NOTE!** Skip this if using Dataverse. When using a **List** (SharePoint),
-   search the **SharePoint** connector, select it, then select an existing
-   connection or create a new one — and provide your OneDrive/SharePoint site URL
-   (the one you copied in Part 1) to pick the `Maintenance Requests` list.
+   search the **SharePoint** connector and select it. Then select an existing
+   connection or create a new one. Provide your OneDrive site URL (the one you
+   copied in Part 1) and pick the `Maintenance Requests` list.
 
    ![Selecting the SharePoint connector](images/P3-spo-data.png)
 
    ![Choosing or creating the SharePoint connection](images/P3-spo-conn.png)
+
+   ![Providing the OneDrive site URL](images/P3-spo-conn-2.png)
+
+   ![Picking the Maintenance Requests list](images/P3-spo-conn-3.png)
 
 8. Click **+** in the main area (main container) and add **Vertical gallery** control.
 
