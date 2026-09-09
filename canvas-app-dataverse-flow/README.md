@@ -59,18 +59,22 @@ maintenance requests. In this lab you will:
 
 ✅ **Checkpoint:** You have a `Maintenance Request` table with custom columns.
 
-### Alternative: use a Microsoft List instead
+### Alternative: use a SharePoint list instead
 
-Prefer a personal **Microsoft List** (or don't have Dataverse)? You can build the
-whole lab on a list saved to **My lists** (OneDrive-backed) with the same fields —
-the app and flow steps are almost identical (in Power Apps you'd add the list as
-the data source instead of the Dataverse table).
+Prefer a **SharePoint list** (or don't have Dataverse)? You can build the whole lab
+on a SharePoint list with the same fields — the app and flow steps are almost
+identical (in Power Apps you'd add the list as the data source instead of the
+Dataverse table).
 
-1. Go to **https://lists.microsoft.com** (or Microsoft 365 app launcher →
-   **Lists**) → **+ New list** → **Blank list**.
-2. Name it `Maintenance Requests`, and under **Save to** choose **My lists**, then
-   select **Create**.
-3. The list already has a **Title** column (single line of text). Add the rest via
+1. Open **SharePoint** (Microsoft 365 app launcher → **SharePoint**) and go to the
+   site where you want the list.
+
+   ![Opening SharePoint from the app launcher](images/P1-sharepoint.png)
+2. Select **+ New** → **List** → **Blank list**.
+
+   ![Creating a new blank list](images/P1-create-list.png)
+3. Name it `Maintenance Requests` and select **Create**.
+4. The list already has a **Title** column (single line of text). Add the rest via
    **+ Add column**:
 
    | Column name   | Column type            | Notes                                            |
@@ -81,12 +85,11 @@ the data source instead of the Dataverse table).
    | `Status`      | Choice                 | Choices: `New`, `In Progress`, `Done` (default `New`) |
    | `Requestor Email` | Single line of text | Who logged it                                    |
 
-4. *(Optional)* Add a couple of sample items with **+ New**.
+5. *(Optional)* Add a couple of sample items with **+ New**.
 
-> **Notes when using a Microsoft List instead of Dataverse:**
-> - Lists in **My lists** are stored in your **OneDrive** rather than a SharePoint
->   site. In Power Apps, add data via **Data → + Add data → SharePoint** and pick
->   the list — Microsoft Lists use the SharePoint connector under the hood.
+> **Notes when using SharePoint instead of Dataverse:**
+> - In Power Apps, add data via **Data → + Add data → SharePoint**, pick your site,
+>   then the `Maintenance Requests` list.
 > - Choice columns return a **record** in Power Fx — reference `.Value`
 >   (e.g. `ThisItem.Priority.Value`), same as Dataverse choices.
 > - When submitting from an Edit form, the choice value is written back
