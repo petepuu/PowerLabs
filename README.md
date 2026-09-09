@@ -4,4 +4,6 @@ Hands-on labs for the Microsoft Power Platform.
 
 ## Labs
 
-- [Build a Canvas Power App with a Dataverse Table and a Power Automate Flow](canvas-app-dataverse-flow/README.md) — ~30 min, beginner. Create a custom Dataverse table, build a responsive Canvas app, and call a Power Automate cloud flow.
+- [Canvas Power App + Power Automate Flow](canvas-app-dataverse-flow/README.md) — ~35 min, beginner. Build a responsive Canvas app that calls a Power Automate cloud flow. Available in two variants:
+  - [Dataverse variant](canvas-app-dataverse-flow/lab-dataverse.md)
+  - [SharePoint variant](canvas-app-dataverse-flow/lab-sharepoint.md)
