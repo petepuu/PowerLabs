@@ -174,7 +174,7 @@ sends an email.
    ![Adding a vertical gallery control](images/P4-add-gallery.png)
 8. Click **Data** and select **Maintenance Requests**.
 
-   ![Selecting the gallery data source](images/P4-select-gallery-data.png)
+   ![Selecting the gallery data source](images/P4-select-gallery-data-spo.png)
 9. Click **Layout** and select **Title, subtitle and body**.
 
    ![Selecting the gallery layout](images/P4-gallery-layout.png)
